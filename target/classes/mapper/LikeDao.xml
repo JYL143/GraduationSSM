@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 映射文件配置 上面是mapper约束 namespace是写接口方法的全路径-->
+<mapper namespace="cn.jyl.dao.LikeDao">
+
+    <resultMap id="LikeMap" type="like">
+        <id property="likeid" column="like_id"></id>
+        <result property="commodityid" column="commodity_id"></result>
+        <result property="userid" column="user_id"></result>
+        <!-- 1对多用collection ofType表示的是集合中元素的类型 没写别名的话就要写全限定名-->
+        <collection property="commoditys" ofType="commodity">
+            <id property="commodityid" column="commodity_id"></id>
+            <result property="name" column="name"></result>
+            <result property="subtitle" column="subtitle"></result>
+            <result property="information" column="information"></result>
+            <result property="describe2" column="describe2"></result>
+            <result property="images" column="images"></result>
+            <result property="price" column="price"></result>
+            <result property="stock" column="stock"></result>
+            <result property="status" column="status"></result>
+            <result property="postage" column="postage"></result>
+            <result property="catid" column="cat_id"></result>
+        </collection>
+        <!-- 1对多用collection ofType表示的是集合中元素的类型 没写别名的话就要写全限定名-->
+        <collection property="users"  ofType="user">
+            <id property="userid" column="user_id"></id>
+            <result property="username" column="username"></result>
+            <result property="password" column="password"></result>
+            <result property="phone" column="phone"></result>
+            <result property="realname" column="realname"></result>
+            <result property="sex" column="sex"></result>
+            <result property="cardid" column="cardid"></result>
+            <result property="useraddress" column="user_address"></result>
+            <result property="zipcode" column="zipcode"></result>
+            <result property="level" column="level"></result>
+        </collection>
+    </resultMap>
+
+    <!--  添加收藏-->
+    <insert id="addLikes" parameterType="like">
+        insert into like2 (commodity_id,user_id)values (#{commodityid},#{userid});
+    </insert>
+
+    <!--  根据用户id和商品id查询收藏id -->
+    <select id="findLikeidByLike" resultType="int" parameterType="like">
+      select like_id from like2
+      where commodity_id=#{commodityid} and user_id=#{userid}
+    </select>
+
+    <!--取消收藏-->
+    <delete id="remoLike" parameterType="int">
+        delete from like2 where like_id=#{likeid};
+    </delete>
+
+    <!--  查询登录用户所有的收藏 个人中心 -->
+    <select id="findAllByUserName" resultMap="LikeMap" parameterType="string">
+      select * from like2
+      left join user as u on like2.user_id=u.user_id
+      left join commodity on like2.commodity_id=commodity.commodity_id
+      where u.username=#{username}
+    </select>
+</mapper>

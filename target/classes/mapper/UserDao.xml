@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 映射文件配置 上面是mapper约束 namespace是写接口方法的全路径-->
+<mapper namespace="cn.jyl.dao.UserDao">
+    <!--有外键的用map-->
+    <resultMap id="UserMap" type="user">
+        <id property="userid" column="user_id"/>
+        <result property="username" column="username"></result>
+        <result property="password" column="password"></result>
+        <result property="phone" column="phone"></result>
+        <result property="realname" column="realname"></result>
+        <result property="sex" column="sex"></result>
+        <result property="cardid" column="cardid"></result>
+        <result property="useraddress" column="user_address"></result>
+        <result property="zipcode" column="zipcode"></result>
+        <result property="level" column="level"></result>
+        <!-- 多对一的关系映射用association标签 就是该xml对应的实体类是1
+     property是那个封装实体类的属性名  javaType封装到哪个对象 column是数据名-->
+        <association property="carts"  javaType="cn.jyl.daomain.Cart">
+            <id property="cartid" column="cart_id"></id>
+            <result property="quantity" column="quantity"></result>
+            <result property="commodityid" column="commodity_id"></result>
+            <result property="userid" column="user_id"></result>
+        </association>
+    </resultMap>
+    <!--查询所有用户列表-->
+    <select id="findAll" resultType="user">
+           select * from user
+   </select>
+
+    <!--查询指定id的用户列表-->
+    <select id="findbyuserid" resultType="user" parameterType="int">
+           select * from user where user_id=#{userid}
+   </select>
+
+    <!-- 更新用户信息-->
+    <update id="update" parameterType="user">
+        update user
+        <set>
+            <if test="username != null">
+                username = #{username},
+            </if>
+            <if test="phone != null">
+                phone = #{phone},
+            </if>
+            <if test="realname != null">
+                realname = #{realname},
+            </if>
+            <if test="sex != null">
+                sex = #{sex},
+            </if>
+            <if test="cardid != null">
+                cardid = #{cardid},
+            </if>
+            <if test="useraddress != null">
+                user_address = #{useraddress},
+            </if>
+            <if test="zipcode != null">
+                zipcode = #{zipcode},
+            </if>
+            <if test="password != null">
+                password = #{password},
+            </if>
+        </set>
+        where user_id=#{userid}
+    </update>
+
+    <!--搜索功能 真实姓名，性别，用户级别-->
+    <select id="search" resultType="user" parameterType="user">
+        select * from user
+        <where>
+            <if test="realname != null  and realname!='' ">
+                and  realname like concat('%',#{realname},'%')
+            </if>
+
+            <if test="sex != null  and sex!='' ">
+                and  sex =#{sex}
+            </if>
+
+            <if test="level==0 || level==1 ">
+                and  level = #{level}
+            </if>
+
+        </where>
+
+    </select>
+
+    <!--查询指定用户名的用户信息(商品详情页查询地址,个人中心用到)-->
+    <select id="findAllByName" resultType="user" parameterType="string">
+           select * from user where username=#{username}
+   </select>
+
+    <!-- 按用户姓名修改用户地址和性别,邮政编码，(个人中心用到)-->
+    <update id="update_AdressAndSex" parameterType="user">
+        update user
+        <set>
+            <if test="useraddress != null">
+                user_address = #{useraddress},
+            </if>
+            <if test="sex != null">
+                sex = #{sex},
+            </if>
+            <if test="zipcode != null">
+                zipcode = #{zipcode},
+            </if>
+        </set>
+        where username=#{username}
+    </update>
+
+    <!-- 查询指定用户名的用户id(个人中心的订单查询用到)-->
+    <select id="findUserIdByName" resultType="int" parameterType="string">
+           select user_id from user where username=#{username}
+   </select>
+
+    <!-- 查询指定手机号的用户名(前台登录忘记密码用到)-->
+    <select id="findUserNameByPhone" resultType="string" parameterType="string">
+           select username from user where phone=#{phone}
+   </select>
+
+    <!--查询用户有多少人显示到列表-->
+    <select id="findAllNumber" resultType="int">
+        select count(*) from user
+    </select>
+
+</mapper>

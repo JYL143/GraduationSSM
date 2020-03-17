@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 映射文件配置 上面是mapper约束 namespace是写接口方法的全路径-->
+<mapper namespace="cn.jyl.dao.LoginDao">
+
+    <!-- 查询输入的用户名的密码-->
+    <select id="login" resultType="user" parameterType="String">
+        select * from user where username=#{username}
+
+    </select>
+
+    <!--  查询数据库的所有用户名，来循环判断输入的用户名存在不存在-->
+    <select id="findAllname" resultType="string">
+         select username from user
+    </select>
+
+    <!--  根据管理员手机号修改密码-->
+    <update id="updatepassword" parameterType="user">
+          update user set password=#{password}  where phone=#{phone}
+    </update>
+
+    <!--  查询所有的管理员的电话号码判断前台输入的号码是不是管理员密码-->
+    <select id="findAllphone" resultType="string">
+         select phone from user where level =0
+    </select>
+
+    <!--  查询所有的管电话号码判断前台输入的号码是不是注册用户-->
+    <select id="getphone" resultType="string">
+          select phone from user
+    </select>
+
+    <!--  查询该手机号的用户名-->
+    <select id="findNameByphone" resultType="string" parameterType="string">
+          select username from user where phone=#{phone}
+    </select>
+
+    <!--  前台注册用户-->
+    <insert id="registerUser" parameterType="user">
+          insert into user (username,password,phone,level)
+           values (#{username},#{password},#{phone},1);
+    </insert>
+</mapper>

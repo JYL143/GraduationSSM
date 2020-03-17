@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 映射文件配置 上面是mapper约束 namespace是写接口方法的全路径-->
+<mapper namespace="cn.jyl.dao.CartDao">
+
+    <resultMap id="CartMap" type="cart">
+        <id property="cartid" column="cart_id"></id>
+        <result property="quantity" column="quantity"></result>
+        <result property="commodityid" column="commodity_id"></result>
+        <result property="userid" column="user_id"></result>
+        <!-- 1对多用collection ofType表示的是集合中元素的类型 没写别名的话就要写全限定名-->
+        <collection property="commoditys" ofType="commodity">
+            <id property="commodityid" column="commodity_id"></id>
+            <result property="name" column="name"></result>
+            <result property="subtitle" column="subtitle"></result>
+            <result property="information" column="information"></result>
+            <result property="describe2" column="describe2"></result>
+            <result property="images" column="images"></result>
+            <result property="price" column="price"></result>
+            <result property="stock" column="stock"></result>
+            <result property="status" column="status"></result>
+            <result property="postage" column="postage"></result>
+            <result property="catid" column="cat_id"></result>
+        </collection>
+        <!-- 1对多用collection ofType表示的是集合中元素的类型 没写别名的话就要写全限定名-->
+        <collection property="users"  ofType="user">
+            <id property="userid" column="user_id"></id>
+            <result property="username" column="username"></result>
+            <result property="password" column="password"></result>
+            <result property="phone" column="phone"></result>
+            <result property="realname" column="realname"></result>
+            <result property="sex" column="sex"></result>
+            <result property="cardid" column="cardid"></result>
+            <result property="useraddress" column="user_address"></result>
+            <result property="zipcode" column="zipcode"></result>
+            <result property="level" column="level"></result>
+        </collection>
+    </resultMap>
+
+
+    <!-- 查询登录用户所有的购物车信息-->
+    <select id="findAll" resultMap="CartMap" parameterType="string">
+      select * from cart
+      left join user as u on cart.user_id=u.user_id
+      left join commodity on cart.commodity_id=commodity.commodity_id
+      where u.username=#{username}
+    </select>
+
+    <!-- 删除购物车（支付成功和移除商品用）-->
+    <delete id="delete" parameterType="int">
+        delete from cart where cart_id=#{cartid};
+    </delete>
+
+    <!--  购物车商品添加数量(等于库存不添加)-->
+    <update id="addQuantity" parameterType="int">
+        update cart set quantity=quantity+1 where  cart_id=#{cartid};
+    </update>
+
+    <!--   购物车商品减少数量（等于1不减少）-->
+    <update id="reduceQuantity" parameterType="int">
+        update cart set quantity=quantity-1 where  cart_id=#{cartid};
+    </update>
+
+    <!-- 按id查询商品数量(用于减少数量操作，为1不减少)-->
+    <select id="findQuantityById"  resultType="int" parameterType="int">
+      select quantity from cart  where cart_id=#{cartid};
+    </select>
+
+    <!-- 按id查询所有的购物车信息-->
+    <select id="findAllById" resultMap="CartMap" parameterType="int">
+      select * from cart
+      left join user  on cart.user_id=user.user_id
+      left join commodity on cart.commodity_id=commodity.commodity_id
+      where cart.cart_id=#{cartid}
+    </select>
+
+    <!--  添加购物车-->
+    <insert id="addCarts" parameterType="cart">
+        insert into cart (quantity,commodity_id,user_id)values (1,#{commodityid},#{userid});
+    </insert>
+
+    <!--  根据用户名查询用户id-->
+    <select id="findIdByName"  resultType="int" parameterType="string">
+      select user_id from user  where username=#{username};
+    </select>
+
+    <!-- 根据用户id和商品id查询 购物车中已有这个商品的购物车id-->
+    <select id="findCartidByUserIdAndCommodityId"  resultType="int" parameterType="cart">
+      select cart_id from cart  where commodity_id=#{commodityid} and user_id=#{userid}
+    </select>
+
+    <!--根据用户id查询购物车商品数量种类的数量-->
+    <select id="findCartNum"  resultType="int" parameterType="int">
+      select count(*)  from cart group by user_id having user_id=#{userid}
+    </select>
+
+
+
+</mapper>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 映射文件配置 上面是mapper约束 namespace是写接口方法的全路径-->
+<mapper namespace="cn.jyl.dao.YunMiDao">
+
+    <!-- 查询数据到主页，跳转到前台主页（非登录页到主页用的方法）-->
+    <select id="getCommodity" resultType="commodity" parameterType="int">
+        select * from commodity where status=1 and (cat_id=#{catid} or cat_id=#{catid}+1)
+    </select>
+
+</mapper>

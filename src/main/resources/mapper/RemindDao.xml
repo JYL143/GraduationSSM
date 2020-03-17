@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 映射文件配置 上面是mapper约束 namespace是写接口方法的全路径-->
+<mapper namespace="cn.jyl.dao.RemindDao">
+
+    <!--有外键的用map-->
+    <resultMap id="RemindMap" type="remind">
+        <id property="remindid" column="remind_id"/>
+        <result property="userid" column="user_id"></result>
+        <result property="orderid" column="order_id"></result>
+        <result property="remind" column="remind"></result>
+        <result property="remindtime" column="remindtime"></result>
+
+        <!-- 多对一的关系映射用association标签 就是该xml对应的实体类是1
+     property是那个封装实体类的属性名  javaType封装到哪个对象 column是数据名-->
+        <association property="orders"  javaType="cn.jyl.daomain.Orders">
+            <id property="orderid" column="order_id"></id>
+            <result property="money" column="money"></result>
+            <result property="orderstatus" column="order_status"></result>
+            <association property="orderItems"  javaType="cn.jyl.daomain.OrderItem">
+                <id property="orderitemid" column="orderitem_id"></id>
+                <result property="name" column="name"></result>
+                <result property="images" column="images"></result>
+                <result property="price" column="price"></result>
+                <result property="quantity" column="quantity"></result>
+                <result property="orderid" column="order_id"></result>
+                <result property="commodityid" column="commodity_id"></result>
+                <!-- 4表查询-->
+<!--                <association property="commoditys"  javaType="cn.jyl.daomain.Commodity">-->
+<!--                    <id property="commodityid" column="commodity_id"></id>-->
+<!--                 -->
+<!--                </association>-->
+            </association>
+        </association>
+        <collection property="users" ofType="user">
+            <id property="userid" column="user_id"/>
+            <result property="realname" column="realname"></result>
+        </collection>
+    </resultMap>
+
+    <!-- 添加提醒记录 -->
+    <insert id="addRemind" parameterType="remind">
+        insert into remind (user_id,order_id,remind,remindtime)
+        values (#{userid},#{orderid},#{remind},#{remindtimeStr});
+    </insert>
+
+
+    <!-- 查询是否提醒过 主要查询是否提醒过和提醒是0还是1 -->
+    <select id="booleanOrderid" parameterType="int" resultType="remind">
+        select * from remind where order_id=#{orderid}
+    </select>
+
+    <!-- 修改时间和提醒消息-->
+    <update id="update" parameterType="remind">
+        update remind
+        <set>
+            <if test="remindtimeStr != null">
+                remindtime = #{remindtimeStr},
+            </if>
+            <if test="remind != null">
+                remind = #{remind},
+            </if>
+        </set>
+        where order_id=#{orderid}
+    </update>
+
+    <!-- 查询全部提醒(后台主页面等使用到) -->
+    <select id="findAll" resultType="java.util.HashMap">
+        select remind,count(*) as number from remind
+        group by remind
+    </select>
+
+    <!-- 查询提醒以及订单 商品 用户 信息，多表查询-->
+    <select id="findAllPlus" resultMap="RemindMap" parameterType="int">
+       select * from remind
+       left join user on remind.user_id=user.user_id
+       left join orders on remind.order_id=orders.order_id
+       left join  orderitem on orders.orderitem_id=orderitem.orderitem_id
+         where remind=#{remind}
+    </select>
+
+    <!-- 后台处理催单后，删除提醒记录-->
+    <delete id="delete" parameterType="int">
+        delete from remind where order_id=#{orderid};
+    </delete>
+
+    <!-- 查询提醒类别为0或者1的订单id，给订单页受理和发货的时候使用到，如果提醒表有这个订单就删除这个提醒 -->
+    <select id="findAll2"  resultType="int" parameterType="int">
+        select order_id from remind where remind=#{remind}
+    </select>
+
+</mapper>

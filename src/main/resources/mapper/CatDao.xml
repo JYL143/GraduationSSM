@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+        <!DOCTYPE mapper
+                PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+                "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+        <!-- 映射文件配置 上面是mapper约束 namespace是写接口方法的全路径-->
+<mapper namespace="cn.jyl.dao.CatDao">
+
+    <resultMap id="CatMap" type="cat">
+        <id property="catid" column="cat_id"></id>
+        <result property="catname" column="cat_name"></result>
+        <!-- 1对多用collection ofType表示的是集合中元素的类型 没写别名的话就要写全限定名-->
+        <collection property="commoditys" ofType="commodity">
+            <id property="commodityid" column="commodity_id"></id>
+            <result property="name" column="name"></result>
+            <result property="subtitle" column="subtitle"></result>
+            <result property="information" column="information"></result>
+            <result property="describe2" column="describe2"></result>
+            <result property="images" column="images"></result>
+            <result property="price" column="price"></result>
+            <result property="stock" column="stock"></result>
+            <result property="status" column="status"></result>
+            <result property="postage" column="postage"></result>
+            <result property="catid" column="cat_id"></result>
+        </collection>
+    </resultMap>
+
+    <!-- 查询所有分类-->
+    <select id="findAll" resultType="cat">
+      select * from cat
+    </select>
+
+    <!--查询有商品的分类信息 -->
+    <select id="findcs" resultType="java.util.HashMap">
+          select cat.cat_id, cat_name,count(*) as number from cat
+          right outer join commodity on cat.cat_id=commodity.cat_id
+            group by commodity.cat_id
+   </select>
+
+    <!-- 查询没有商品的分类信息-->
+    <select id="findcs0" resultType="java.util.HashMap">
+        select cat.cat_id,cat_name from cat
+         left  join commodity on cat.cat_id=commodity.cat_id
+	    where commodity.cat_id is null
+  </select>
+
+    <!--只查询有商品的分类名和id(商品管理页下拉框用到) -->
+    <select id="findcatName" resultType="cat">
+         select cat_name ,cat.cat_id from cat
+        right outer join commodity on cat.cat_id=commodity.cat_id
+        group by commodity.cat_id
+   </select>
+    <!-- 删除方法-->
+    <delete id="delete" parameterType="int">
+        delete from cat where cat_id=#{catid};
+    </delete>
+
+    <!-- 添加方法 -->
+    <insert id="add" parameterType="string">
+        insert into cat (cat_name)
+        values (#{catname});
+    </insert>
+
+
+    <!--查询指定id的分类信息-->
+    <select id="findbycatid" parameterType="int" resultType="cat">
+         select * from cat
+         where cat_id=#{catid};
+    </select>
+
+    <!-- 更新商品-->
+    <update id="update" parameterType="cat">
+        update cat
+        <set>
+            <if test="catname != null">
+                cat_name = #{catname},
+            </if>
+
+        </set>
+        where cat_id=#{catid};
+    </update>
+
+
+</mapper>

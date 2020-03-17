@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 映射文件配置 上面是mapper约束 namespace是写接口方法的全路径-->
+<mapper namespace="cn.jyl.dao.CommodityDao">
+
+    <!--有外键的用map-->
+    <resultMap id="CommodityMap" type="commodity">
+        <id property="commodityid" column="commodity_id"/>
+        <result property="name" column="name"></result>
+        <result property="subtitle" column="subtitle"></result>
+        <result property="information" column="information"></result>
+        <result property="describe2" column="describe2"></result>
+        <result property="images" column="images"></result>
+        <result property="price" column="price"></result>
+        <result property="stock" column="stock"></result>
+        <result property="status" column="status"></result>
+        <result property="postage" column="postage"></result>
+        <result property="catid" column="cat_id"></result>
+        <!-- 多对一的关系映射用association标签 就是该xml对应的实体类是1
+         property是那个封装实体类的属性名  javaType封装到哪个对象 column是数据名-->
+        <association property="cats"  javaType="cn.jyl.daomain.Cat">
+            <id property="catid" column="cat_id"></id>
+            <result property="catname" column="cat_name"></result>
+        </association>
+        <!-- 多对一的关系映射用association标签 就是该xml对应的实体类是1
+     property是那个封装实体类的属性名  javaType封装到哪个对象 column是数据名-->
+        <association property="carts"  javaType="cn.jyl.daomain.Cart">
+            <id property="cartid" column="cart_id"></id>
+            <result property="quantity" column="quantity"></result>
+            <result property="commodityid" column="commodity_id"></result>
+            <result property="userid" column="user_id"></result>
+        </association>
+    </resultMap>
+
+
+    <!-- 查询所有商品信息,带分类信息     -->
+    <select id="findAll" resultMap="CommodityMap">
+        select * from commodity
+        left join cat on commodity.cat_id=cat.cat_id
+    </select>
+
+    <!--查询指定分类的商品所有信息 -->
+    <select id="findAllByCat" resultMap="CommodityMap" parameterType="int">
+        select * from commodity
+        left join cat on commodity.cat_id=cat.cat_id
+         where commodity.cat_id=#{catid}
+
+    </select>
+
+
+    <!--查询指定id的商品信息用来做修改页面和添加库存功能用-->
+    <select id="findbycommodityid" parameterType="int" resultMap="CommodityMap">
+         select * from commodity
+         left join cat on commodity.cat_id=cat.cat_id
+         where commodity_id=#{commodityid};
+    </select>
+
+
+    <!-- 添加商品 -->
+    <insert id="savacommodity" parameterType="commodity">
+        insert into commodity (name,subtitle,information,describe2,images,price,stock,status,postage,cat_id)
+        values (#{name},#{subtitle},#{information},#{describe2},#{images},#{price},#{stock},#{status},#{postage},#{catid});
+    </insert>
+
+    <!-- 删除商品-->
+    <delete id="delete" parameterType="int">
+        delete from commodity where commodity_id=#{commodityid};
+    </delete>
+
+    <!-- 更新商品-->
+    <update id="update" parameterType="commodity">
+        update commodity
+            <set>
+                <if test="name != null">
+                    name = #{name},
+                </if>
+                <if test="subtitle != null">
+                    subtitle = #{subtitle},
+                </if>
+                <if test="information != null">
+                    information = #{information},
+                </if>
+                <if test="images != null">
+                    images = #{images},
+                </if>
+                <if test="price != null">
+                    price = #{price},
+                </if>
+                <if test="describe2 != null">
+                    describe2 = #{describe2},
+                </if>
+                <if test="postage != null">
+                    postage = #{postage},
+                </if>
+                <if test="catid != null">
+                    cat_id = #{catid},
+                </if>
+            </set>
+        where commodity_id=#{commodityid};
+    </update>
+
+    <!-- 商品状态页根据 商品状态或者库存数量范围 查询全部 -->
+    <select id="findAllByStatus" resultMap="CommodityMap" parameterType="search2">
+        select * from commodity
+        left join cat on commodity.cat_id=cat.cat_id
+
+        <where>
+            <if test="kc1 != null  and kc1!='' ">
+                and  commodity.stock <![CDATA[ >= ]]> #{kc1}
+            </if>
+            <if test="kc2 != null  and kc2!='' ">
+                and  commodity.stock <![CDATA[ <= ]]> #{kc2}
+            </if>
+
+            <if test="status==0 ||status==1 ">
+                and  commodity.status = #{status}
+            </if>
+        </where>
+    </select>
+
+    <!-- 商品上架-->
+    <update id="commodity_status_edit1" parameterType="int">
+        update commodity set status=1 where commodity_id=#{commodityid};
+    </update>
+
+    <!-- 商品下架-->
+    <update id="commodity_status_edit0" parameterType="int">
+    update commodity set status=0 where commodity_id=#{commodityid};
+    </update>
+
+    <!-- 添加库存操作 -->
+    <update id="add_stock" parameterType="commodity">
+    update commodity set stock=stock+#{stock} where commodity_id=#{commodityid};
+    </update>
+
+    <!-- 减少库存操作（给购物车控制类 支付成功后减少购物车对应的数量） -->
+    <update id="reduce_stock" parameterType="commodity">
+    update commodity set stock=stock-#{stock} where commodity_id=#{commodityid};
+    </update>
+
+    <!-- 包邮功能-->
+    <update id="commodity_status_postage0" parameterType="int">
+        update commodity set postage=0 where commodity_id=#{commodityid};
+    </update>
+
+    <!-- 按商品id查询商品库存（给购物车添加功能使用，如果购物车当前数量等于库存就不能继续添加） -->
+    <select id="findStockById" resultType="int" parameterType="int">
+        select stock from commodity where commodity_id=#{commodityid};
+    </select>
+
+    <!-- 按指定id查询商品信息（给前台显示商品详情页用） -->
+    <select id="findByIdAll" resultType="commodity" parameterType="int">
+        select * from commodity where commodity_id=#{commodityid};
+    </select>
+
+    <!--  前台搜索功能，搜索商品名字 -->
+    <select id="searchCommodityname" resultType="int" parameterType="string">
+        select commodity_id from commodity where name like concat('%',#{name},'%') and status=1
+    </select>
+
+
+</mapper>

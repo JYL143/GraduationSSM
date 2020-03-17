@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 映射文件配置 上面是mapper约束 namespace是写接口方法的全路径-->
+<mapper namespace="cn.jyl.dao.ShopinfoDao">
+
+    <select id="findshopinfo" resultType="shopinfo">
+        select * from shopinfo
+    </select>
+
+    <!--  更新店铺信息  set自动去多余的逗号-->
+    <update id="update" parameterType="shopinfo">
+        update shopinfo
+        <set>
+            <if test="shopname != null">
+                shop_name = #{shopname},
+            </if>
+            <if test="shopaddress != null">
+                shop_address = #{shopaddress},
+            </if>
+            <if test="shopimage != null">
+                shopimage = #{shopimage},
+            </if>
+            <if test="shopjs != null">
+                shopjs = #{shopjs},
+            </if>
+
+        </set>
+        where shopinfo_id=#{shopinfoid};
+    </update>
+</mapper>

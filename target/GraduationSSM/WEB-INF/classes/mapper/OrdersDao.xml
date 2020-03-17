@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 映射文件配置 上面是mapper约束 namespace是写接口方法的全路径-->
+<mapper namespace="cn.jyl.dao.OrdersDao">
+
+    <!--有外键的用map-->
+    <resultMap id="OrdersMap" type="orders">
+        <id property="orderid" column="order_id"></id>
+        <result property="orderbh" column="orderbh"></result>
+        <result property="money" column="money"></result>
+        <result property="postage" column="postage"></result>
+        <result property="orderstatus" column="order_status"></result>
+        <result property="ordertime" column="order_time"></result>
+        <result property="sendtime" column="sendtime"></result>
+        <result property="kd" column="kd"></result>
+        <result property="closetime" column="closetime"></result>
+        <result property="userid" column="user_id"></result>
+        <result property="orderitemid" column="orderitem_id"></result>
+        <!-- 多对一的关系映射用association标签 就是该xml对应的实体类是1
+         property是那个封装实体类的属性名  javaType封装到哪个对象 column是数据名-->
+        <association property="users"  javaType="cn.jyl.daomain.User">
+            <id property="userid" column="user_id"></id>
+            <result property="username" column="username"></result>
+            <result property="password" column="password"></result>
+            <result property="phone" column="phone"></result>
+            <result property="realname" column="realname"></result>
+            <result property="sex" column="sex"></result>
+            <result property="cardid" column="cardid"></result>
+            <result property="useraddress" column="user_address"></result>
+            <result property="zipcode" column="zipcode"></result>
+            <result property="level" column="level"></result>
+        </association>
+        <association property="orderItems"  javaType="cn.jyl.daomain.OrderItem">
+            <id property="orderitemid" column="orderitem_id"></id>
+            <result property="name" column="name"></result>
+            <result property="images" column="images"></result>
+            <result property="price" column="price"></result>
+            <result property="quantity" column="quantity"></result>
+            <result property="orderid" column="order_id"></result>
+            <result property="commodityid" column="commodity_id"></result>
+            <!-- 3表查询-->
+            <association property="commoditys"  javaType="cn.jyl.daomain.Commodity">
+                <id property="commodityid" column="commodity_id"></id>
+                <result property="subtitle" column="subtitle"></result>
+                <result property="information" column="information"></result>
+                <result property="describe2" column="describe2"></result>
+                <result property="stock" column="stock"></result>
+                <result property="status" column="status"></result>
+                <result property="catid" column="cat_id"></result>
+            </association>
+        </association>
+    </resultMap>
+<!--    <sql id="findOrderList">-->
+<!--       -->
+<!--    </sql>-->
+
+    <!--订单列表功能 涉及两个外键两个左连接查询-->
+    <select id="findAll" resultMap="OrdersMap" >
+      select * from orders
+       left join user on orders.user_id=user.user_id
+       left join  orderitem on orders.orderitem_id=orderitem.orderitem_id
+     </select>
+
+    <!--查询订单总记录数-->
+    <select id="findCount" resultType="int" >
+        select count(*) from orders
+    </select>
+
+    <!--查询未处理订单总记录数-->
+    <select id="findCountBystatus0" resultType="int" >
+        select count(*) from orders
+        where order_status=0
+    </select>
+
+    <!--查询待发货订单总记录数-->
+    <select id="findCountBystatus1" resultType="int" >
+        select count(*) from orders
+        where order_status=1
+    </select>
+
+    <!--查询成交金额-->
+    <select id="findAllMoney" resultType="double" >
+       select sum(money) from orders
+    </select>
+
+    <!--电视销量-->
+    <select id="findAllDs" resultType="double" >
+         select count(*) from orders
+         left join  orderitem on orders.orderitem_id=orderitem.orderitem_id
+         left join commodity on orderitem.commodity_id=commodity.commodity_id
+        where commodity.cat_id=1
+    </select>
+
+    <!--手机销量-->
+    <select id="findAllSj" resultType="double" >
+         select count(*) from orders
+         left join  orderitem on orders.orderitem_id=orderitem.orderitem_id
+         left join commodity on orderitem.commodity_id=commodity.commodity_id
+        where commodity.cat_id=3
+    </select>
+
+    <!--家电销量-->
+    <select id="findAllJd" resultType="double" >
+         select count(*) from orders
+         left join  orderitem on orders.orderitem_id=orderitem.orderitem_id
+         left join commodity on orderitem.commodity_id=commodity.commodity_id
+        where commodity.cat_id=7
+    </select>
+    <!--查看详情按钮，使用ajax查询指定id到查看详情模态框上 ,-->
+    <select id="findAllbyorderid" resultMap="OrdersMap" parameterType="int">
+      select * from orders
+       left join user on orders.user_id=user.user_id
+       left join  orderitem on orders.orderitem_id=orderitem.orderitem_id
+       where orders.order_id=#{orderid}
+  </select>
+
+    <!-- 订单处理功能  -->
+    <update id="orders_status_edit1" parameterType="int">
+        update orders set order_status=1 where order_id=#{orderid};
+    </update>
+
+    <!-- 订单发货功能（改发货状态和发货时间）  -->
+    <update id="orders_status_edit2" parameterType="orders">
+        update orders set order_status=2,sendtime=#{sendtimeStr},orderbh=#{orderbh},kd=#{kd} where order_id=#{orderid};
+    </update>
+
+    <!-- 订单收货功能（个人中心 我的订单用到） -->
+    <update id="orders_status_edit3" parameterType="orders">
+        update orders set order_status=3,closetime=#{closetimeStr} where order_id=#{orderid};
+    </update>
+
+    <!--搜索功能-->
+    <select id="search" resultMap="OrdersMap" parameterType="search">
+      select * from orders
+       left join user on orders.user_id=user.user_id
+       left join  orderitem on orders.orderitem_id=orderitem.orderitem_id
+
+       <where>
+           <if test="bh != null  and bh!='' ">
+               and  orders.orderbh like concat('%',#{bh},'%')
+           </if>
+
+
+           <if test="je1 != null  and je1!='' ">
+               and  orders.money <![CDATA[ >= ]]> #{je1}
+           </if>
+
+           <if test="je2 != null  and je2!='' ">
+               and  orders.money <![CDATA[ <= ]]> #{je2}
+           </if>
+
+           <if test="status==0 ||status==1 || status==2|| status==3">
+               and  orders.order_status = #{status}
+           </if>
+       </where>
+
+  </select>
+
+
+    <!--未处理订单列表-->
+    <select id="orders_status0" resultMap="OrdersMap" parameterType="int" >
+      select * from orders
+       left join user on orders.user_id=user.user_id
+       left join  orderitem on orders.orderitem_id=orderitem.orderitem_id
+        where orders.order_status=0
+     </select>
+
+    <!--未发货订单列表-->
+    <select id="orders_status1" resultMap="OrdersMap" parameterType="int" >
+      select * from orders
+       left join user on orders.user_id=user.user_id
+       left join  orderitem on orders.orderitem_id=orderitem.orderitem_id
+        where orders.order_status=1
+    </select>
+
+    <!--已发货订单列表-->
+    <select id="orders_status2" resultMap="OrdersMap" parameterType="int" >
+      select * from orders
+       left join user on orders.user_id=user.user_id
+       left join  orderitem on orders.orderitem_id=orderitem.orderitem_id
+        where orders.order_status=2
+    </select>
+
+    <!--已收货订单列表-->
+    <select id="orders_status3" resultMap="OrdersMap" parameterType="int" >
+      select * from orders
+       left join user on orders.user_id=user.user_id
+       left join  orderitem on orders.orderitem_id=orderitem.orderitem_id
+        where orders.order_status=3
+    </select>
+
+    <!-- 查询订单表当前id最大值，给给购物车创建订单表和详情表用 -->
+    <select id="findMaxOrderId" resultType="int" >
+      select max(orderitem_id) from orders
+     </select>
+
+    <!-- 添加订单表(购物车类使用) -->
+    <insert id="addOrders" parameterType="orders">
+        insert into orders (order_id,money,postage,order_status,order_time,user_id,orderitem_id)
+        values (#{orderid},#{money},#{postage},0,#{ordertimeStr},#{userid},#{orderitemid});
+    </insert>
+
+    <!--  添加订单详情表(购物车类使用) -->
+    <insert id="addOrderItem" parameterType="cn.jyl.daomain.OrderItem">
+         insert into orderitem (orderitem_id,name,images,price,quantity,order_id,commodity_id)
+        values (#{orderitemid},#{name},#{images},#{price},#{quantity},#{orderid},#{commodityid});
+    </insert>
+
+    <!--  查询指定用户id的订单信息(个人中心我的订单用到) -->
+    <select id="findAllByUserId" resultMap="OrdersMap" parameterType="int">
+      select * from orders
+       left join user on orders.user_id=user.user_id
+       left join  orderitem on orders.orderitem_id=orderitem.orderitem_id
+       left join commodity on orderitem.commodity_id=commodity.commodity_id
+       where orders.user_id=#{user_id}
+   </select>
+
+
+    <select id="findAllByUserId0" resultMap="OrdersMap" parameterType="int">
+       select * from orders
+       left join user on orders.user_id=user.user_id
+       left join  orderitem on orders.orderitem_id=orderitem.orderitem_id
+       left join commodity on orderitem.commodity_id=commodity.commodity_id
+       where orders.user_id=#{user_id}  and orders.order_status=0
+   </select>
+
+    <select id="findAllByUserId1" resultMap="OrdersMap" parameterType="int">
+          select * from orders
+       left join user on orders.user_id=user.user_id
+       left join  orderitem on orders.orderitem_id=orderitem.orderitem_id
+       left join commodity on orderitem.commodity_id=commodity.commodity_id
+
+        where orders.user_id=#{user_id} and orders.order_status=1
+   </select>
+
+    <select id="findAllByUserId2" resultMap="OrdersMap" parameterType="int">
+          select * from orders
+       left join user on orders.user_id=user.user_id
+       left join  orderitem on orders.orderitem_id=orderitem.orderitem_id
+       left join commodity on orderitem.commodity_id=commodity.commodity_id
+
+        where orders.user_id=#{user_id}   and orders.order_status=2
+   </select>
+
+    <select id="findAllByUserId3" resultMap="OrdersMap" parameterType="int">
+          select * from orders
+       left join user on orders.user_id=user.user_id
+       left join  orderitem on orders.orderitem_id=orderitem.orderitem_id
+       left join commodity on orderitem.commodity_id=commodity.commodity_id
+
+        where orders.user_id=#{user_id}  and orders.order_status=3
+   </select>
+</mapper>

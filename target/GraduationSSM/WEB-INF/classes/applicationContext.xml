@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context.xsd
+	http://www.springframework.org/schema/aop
+	http://www.springframework.org/schema/aop/spring-aop.xsd
+	http://www.springframework.org/schema/tx
+	http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+
+    <!-- 开启注解扫描  只希望扫描处理service和 dao  controller不需要Spring框架处理-->
+    <context:component-scan base-package="cn.jyl">
+        <!--配置哪些不扫描  annotation注解类型，然后指定controller注解的类-->
+        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+    </context:component-scan>
+
+    <!-- Spring框架整合Mybatis框架 ,这里配完就可以把mybatis配置文件删除了  3步-->
+    <!--配置连接池 将utc改成GMT%2B8解决数据库读取时间差8小时问题 ,-->
+    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+        <property name="driverClass" value="com.mysql.cj.jdbc.Driver"/>
+        <property name="jdbcUrl" value="jdbc:mysql:///ssm?useSSL=false&amp;serverTimezone=GMT%2B8"/>
+        <property name="user" value="root"/>
+        <property name="password" value="565649"/>
+    </bean>
+
+
+    <!--配置SqlSessionFactory工厂  这个name是属性名不是自定义名字-->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <!--指定mybatis全局配置文件-->
+        <property name="configLocation" value="classpath:SqlMapConfig.xml"></property>
+        <property name="dataSource" ref="dataSource" />
+        <!--指定mybatismapper配置文件-->
+        <property name="mapperLocations" value="classpath:mapper/*.xml"></property>
+    </bean>
+
+    <!--配置扫描器，将mybatis接口的实现加入到ioc容器中-->
+    <bean id="mapperScanner" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="cn.jyl.dao"/>
+    </bean>
+
+
+
+
+
+</beans>

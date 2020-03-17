@@ -1,0 +1,1104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="GraduationSSM:war" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e20bd374-72be-42de-91ca-1978f485b59e" name="Default Changelist" comment="" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="$PROJECT_DIR$/../Dubbo/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/CommodityDao.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3002">
+              <caret line="158" column="27" selection-start-line="158" selection-start-column="27" selection-end-line="158" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/LikeDao.xml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/hd/commodity_add.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="5149">
+              <caret line="271" column="18" selection-start-line="271" selection-start-column="18" selection-end-line="271" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/jyl/controller/AlipayController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1311">
+              <caret line="88" column="17" selection-start-line="88" selection-start-column="17" selection-end-line="88" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/jyl/controller/LikeController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="114">
+              <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/jyl/controller/LoginController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="8075">
+              <caret line="454" selection-start-line="454" selection-end-line="454" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/jyl/controller/YunMiController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2565">
+              <caret line="160" column="33" selection-start-line="160" selection-start-column="33" selection-end-line="160" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/CatDao.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1045">
+              <caret line="55" column="13" selection-start-line="55" selection-start-column="13" selection-end-line="55" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cn/jyl/controller/CommodityController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="361">
+              <caret line="39" column="19" selection-start-line="39" selection-start-column="19" selection-end-line="39" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="spring-beans.schema" />
+        <option value="Tag Library Descriptor" />
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="Jsp File" />
+      </list>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/hd/commodity_add.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/hd/commodity_edit.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/hd/commodity_status.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/hd/index-hd.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/hd/orders_edit.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/hd/orders_status0.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/hd/orders_status1.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/hd/orders_status2.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/hd/orders_status3.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/hd/remind0.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/hd/shopinfo_zy.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/hd/remind99.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/hd/user_edit.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/login/repassword.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/login/login.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/qd/cart.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/qd/commodity.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/qd/commodityByCat.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/qd/error.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/qd/index.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/qd/like.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/qd/like99.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/qd/order.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/qd/order0.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/qd/order1.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/qd/order2.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/qd/order3.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/qd/order99.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/qd/register.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/qd/repassword.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/qd/repassworSuccess.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/qd/success.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/qd/user.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/qd/useradress.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/qd/userinfo.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/qd/userinfopassword.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/qd/yunlogin.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/cs.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/jyl/config/AlipayConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/jyl/controller/AlipayController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/springmvc.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/jyl/Util/YunPian.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/login/repassword_succes.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/jyl/controller/CommodityController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/hd/remind1.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/jyl/controller/OrdersController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/qd/userinfoPhone.jsp" />
+        <option value="$PROJECT_DIR$/../Dubbo/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/hd/cs.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/cn/jyl/controller/LoginController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
+      </list>
+    </option>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="GraduationSSM Maven Webapp" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="GraduationSSM Maven Webapp" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1000" />
+    <option name="y" value="75" />
+    <option name="width" value="1170" />
+    <option name="height" value="1050" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="GraduationSSM" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GraduationSSM" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\上课保存\IJ2\GraduationSSM\src\main\webapp\images" />
+      <recent name="D:\上课保存\IJ2\GraduationSSM\src\main\webapp\qt_img" />
+      <recent name="D:\上课保存\IJ2\GraduationSSM\src\main\webapp\css" />
+      <recent name="D:\上课保存\IJ2\GraduationSSM\src\main\webapp\js" />
+      <recent name="D:\上课保存\IJ2\GraduationSSM\src\main\webapp\fonts" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="cn.jyl.config" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\上课保存\IJ2\GraduationSSM\src\main\resources\messages" />
+      <recent name="D:\上课保存\IJ2\GraduationSSM\src\main\resources\messages\message" />
+      <recent name="D:\上课保存\IJ2\GraduationSSM\src\main\webapp\WEB-INF\pages\qd" />
+      <recent name="D:\上课保存\IJ2\GraduationSSM\src\main\webapp\WEB-INF\pages\login" />
+      <recent name="D:\上课保存\IJ2\GraduationSSM\src\main\webapp" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Tomcat Server.graduation">
+    <configuration name="Cs" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cn.jyl.test.Cs" />
+      <module name="GraduationSSM" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.jyl.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cn.jyl.test.Test" />
+      <module name="GraduationSSM" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.jyl.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestYunPian" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cn.jyl.test.TestYunPian" />
+      <module name="GraduationSSM" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.jyl.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="graduation" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0.65" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="C:\Java\jdk1.8.0_121\jre">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="GraduationSSM:war">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_GraduationSSM" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="57762" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="GraduationSSM:war" />
+        </option>
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Test" />
+        <item itemvalue="Application.Cs" />
+        <item itemvalue="Application.TestYunPian" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e20bd374-72be-42de-91ca-1978f485b59e" name="Default Changelist" comment="" />
+      <created>1573525049584</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1573525049584</updated>
+      <workItem from="1573525051868" duration="857000" />
+      <workItem from="1573535267444" duration="10853000" />
+      <workItem from="1573553168380" duration="1197000" />
+      <workItem from="1573619286211" duration="2506000" />
+      <workItem from="1573631279475" duration="3730000" />
+      <workItem from="1573690424357" duration="7466000" />
+      <workItem from="1573702010748" duration="26000" />
+      <workItem from="1573702142316" duration="2756000" />
+      <workItem from="1573709744160" duration="818000" />
+      <workItem from="1573711074918" duration="1136000" />
+      <workItem from="1573713303082" duration="8812000" />
+      <workItem from="1573777760533" duration="5144000" />
+      <workItem from="1573793594631" duration="3964000" />
+      <workItem from="1573798992349" duration="11747000" />
+      <workItem from="1573867613147" duration="20696000" />
+      <workItem from="1573953710563" duration="7620000" />
+      <workItem from="1573964689378" duration="18612000" />
+      <workItem from="1574040483909" duration="7795000" />
+      <workItem from="1574053211953" duration="16843000" />
+      <workItem from="1574123555145" duration="619000" />
+      <workItem from="1574126287596" duration="1188000" />
+      <workItem from="1574139730524" duration="24060000" />
+      <workItem from="1574212750560" duration="22532000" />
+      <workItem from="1574299919184" duration="27578000" />
+      <workItem from="1574384710065" duration="5687000" />
+      <workItem from="1574393337006" duration="701000" />
+      <workItem from="1574400399512" duration="12722000" />
+      <workItem from="1574482855488" duration="24015000" />
+      <workItem from="1574558480312" duration="19000" />
+      <workItem from="1574558831740" duration="410000" />
+      <workItem from="1574560519666" duration="18697000" />
+      <workItem from="1574659335886" duration="18490000" />
+      <workItem from="1574728863581" duration="2088000" />
+      <workItem from="1574745807050" duration="15869000" />
+      <workItem from="1574830153005" duration="12424000" />
+      <workItem from="1574902473925" duration="27375000" />
+      <workItem from="1574988103155" duration="23000" />
+      <workItem from="1574994962270" duration="48000" />
+      <workItem from="1575008973090" duration="3321000" />
+      <workItem from="1575090576830" duration="20183000" />
+      <workItem from="1575177015967" duration="9479000" />
+      <workItem from="1575186846486" duration="6143000" />
+      <workItem from="1575247623787" duration="11132000" />
+      <workItem from="1575262895193" duration="3101000" />
+      <workItem from="1575270625285" duration="3203000" />
+      <workItem from="1575333375350" duration="3810000" />
+      <workItem from="1575349463088" duration="1371000" />
+      <workItem from="1575350870796" duration="256000" />
+      <workItem from="1575351187288" duration="11979000" />
+      <workItem from="1575381543874" duration="3126000" />
+      <workItem from="1575436005611" duration="598000" />
+      <workItem from="1575439825368" duration="638000" />
+      <workItem from="1575443710684" duration="29000" />
+      <workItem from="1575444447909" duration="2462000" />
+      <workItem from="1575455770580" duration="1092000" />
+      <workItem from="1575458112209" duration="1598000" />
+      <workItem from="1575462879563" duration="464000" />
+      <workItem from="1575506192579" duration="467000" />
+      <workItem from="1575506710085" duration="90000" />
+      <workItem from="1575514121439" duration="50000" />
+      <workItem from="1575521546669" duration="908000" />
+      <workItem from="1575528727454" duration="7325000" />
+      <workItem from="1575779314567" duration="55000" />
+      <workItem from="1575806889124" duration="1639000" />
+      <workItem from="1575868155775" duration="406000" />
+      <workItem from="1575872143441" duration="125000" />
+      <workItem from="1575873041436" duration="19000" />
+      <workItem from="1575879702894" duration="416000" />
+      <workItem from="1575975464448" duration="3117000" />
+      <workItem from="1576049601920" duration="24000" />
+      <workItem from="1576050548648" duration="1834000" />
+      <workItem from="1576052753578" duration="452000" />
+      <workItem from="1576053570031" duration="562000" />
+      <workItem from="1576126495852" duration="11255000" />
+      <workItem from="1576151100052" duration="15030000" />
+      <workItem from="1576213556681" duration="5221000" />
+      <workItem from="1576219089663" duration="335000" />
+      <workItem from="1576219462822" duration="1226000" />
+      <workItem from="1576220743183" duration="3778000" />
+      <workItem from="1576224567504" duration="1079000" />
+      <workItem from="1576233240630" duration="1821000" />
+      <workItem from="1576235092055" duration="471000" />
+      <workItem from="1576235594030" duration="2488000" />
+      <workItem from="1576238294747" duration="5938000" />
+      <workItem from="1576245662198" duration="78000" />
+      <workItem from="1576296192607" duration="4230000" />
+      <workItem from="1576305491858" duration="513000" />
+      <workItem from="1576306033578" duration="620000" />
+      <workItem from="1576306695148" duration="975000" />
+      <workItem from="1576308486548" duration="9955000" />
+      <workItem from="1576385070133" duration="4513000" />
+      <workItem from="1576389632416" duration="766000" />
+      <workItem from="1576390428869" duration="13111000" />
+      <workItem from="1576473118246" duration="83000" />
+      <workItem from="1576490227246" duration="9884000" />
+      <workItem from="1576502040786" duration="6082000" />
+      <workItem from="1576542610113" duration="137000" />
+      <workItem from="1576561931227" duration="8276000" />
+      <workItem from="1576580412670" duration="12399000" />
+      <workItem from="1576636050393" duration="11166000" />
+      <workItem from="1576662802145" duration="13348000" />
+      <workItem from="1576716123885" duration="1194000" />
+      <workItem from="1576752863562" duration="16884000" />
+      <workItem from="1576821278498" duration="703000" />
+      <workItem from="1576822027686" duration="1235000" />
+      <workItem from="1576823305215" duration="1679000" />
+      <workItem from="1576834808028" duration="5698000" />
+      <workItem from="1576845331296" duration="6469000" />
+      <workItem from="1576851844113" duration="3517000" />
+      <workItem from="1576904169748" duration="576000" />
+      <workItem from="1576904777946" duration="6089000" />
+      <workItem from="1576910906015" duration="5736000" />
+      <workItem from="1576933551141" duration="3431000" />
+      <workItem from="1576993035513" duration="13885000" />
+      <workItem from="1577010129766" duration="1802000" />
+      <workItem from="1577011974768" duration="6353000" />
+      <workItem from="1577029389629" duration="1295000" />
+      <workItem from="1577077614282" duration="374000" />
+      <workItem from="1577087796352" duration="21000" />
+      <workItem from="1577089095041" duration="1000" />
+      <workItem from="1577096585127" duration="6982000" />
+      <workItem from="1577104811911" duration="4754000" />
+      <workItem from="1577110966092" duration="51000" />
+      <workItem from="1577147624849" duration="204000" />
+      <workItem from="1577158201796" duration="467000" />
+      <workItem from="1577159487514" duration="1000" />
+      <workItem from="1577159494323" duration="2000" />
+      <workItem from="1577169302419" duration="620000" />
+      <workItem from="1577196516105" duration="4649000" />
+      <workItem from="1577201289987" duration="1378000" />
+      <workItem from="1577202695161" duration="84000" />
+      <workItem from="1577272549392" duration="4739000" />
+      <workItem from="1577277428941" duration="106000" />
+      <workItem from="1577277664862" duration="675000" />
+      <workItem from="1577278538181" duration="4367000" />
+      <workItem from="1577320300264" duration="45000" />
+      <workItem from="1577322035399" duration="5426000" />
+      <workItem from="1577329335894" duration="661000" />
+      <workItem from="1577330027460" duration="645000" />
+      <workItem from="1577332587684" duration="2000" />
+      <workItem from="1577427511537" duration="12032000" />
+      <workItem from="1577456723429" duration="5989000" />
+      <workItem from="1577541902719" duration="3614000" />
+      <workItem from="1577683471403" duration="5510000" />
+      <workItem from="1577753747243" duration="157000" />
+      <workItem from="1577755632887" duration="3204000" />
+      <workItem from="1577764458157" duration="20000" />
+      <workItem from="1577797455239" duration="6539000" />
+      <workItem from="1577856388914" duration="11307000" />
+      <workItem from="1577925479741" duration="10999000" />
+      <workItem from="1577958331080" duration="3828000" />
+      <workItem from="1578011760712" duration="1825000" />
+      <workItem from="1578200385423" duration="3960000" />
+      <workItem from="1578205292218" duration="4803000" />
+      <workItem from="1578284517592" duration="8092000" />
+      <workItem from="1578364386133" duration="1449000" />
+      <workItem from="1578365878713" duration="181000" />
+      <workItem from="1578366092978" duration="10779000" />
+      <workItem from="1578377337004" duration="1220000" />
+      <workItem from="1578379690171" duration="804000" />
+      <workItem from="1578380532084" duration="2032000" />
+      <workItem from="1578382600392" duration="11865000" />
+      <workItem from="1578460801193" duration="4192000" />
+      <workItem from="1578466622607" duration="19518000" />
+      <workItem from="1578539374983" duration="5143000" />
+      <workItem from="1578558962252" duration="6919000" />
+      <workItem from="1578619028687" duration="9983000" />
+      <workItem from="1578630197019" duration="19496000" />
+      <workItem from="1578718511062" duration="7313000" />
+      <workItem from="1578793952543" duration="16196000" />
+      <workItem from="1578881305935" duration="30945000" />
+      <workItem from="1578976878371" duration="7859000" />
+      <workItem from="1579062364313" duration="11669000" />
+      <workItem from="1579082106941" duration="2484000" />
+      <workItem from="1579153620914" duration="7445000" />
+      <workItem from="1579242924972" duration="9738000" />
+      <workItem from="1579322530962" duration="16091000" />
+      <workItem from="1579426594006" duration="3631000" />
+      <workItem from="1579433279389" duration="10897000" />
+      <workItem from="1579501484602" duration="12046000" />
+      <workItem from="1580099397181" duration="389000" />
+      <workItem from="1580132185657" duration="118000" />
+      <workItem from="1580361804616" duration="7000" />
+      <workItem from="1581144659191" duration="8635000" />
+      <workItem from="1581227263874" duration="16313000" />
+      <workItem from="1581316330058" duration="6761000" />
+      <workItem from="1581397407274" duration="11955000" />
+      <workItem from="1581830864090" duration="657000" />
+      <workItem from="1581831952889" duration="14000" />
+      <workItem from="1582875417008" duration="98000" />
+      <workItem from="1582876638559" duration="215000" />
+      <workItem from="1582876989793" duration="53000" />
+      <workItem from="1582877224571" duration="69000" />
+      <workItem from="1582877491352" duration="15000" />
+      <workItem from="1583302790310" duration="25000" />
+      <workItem from="1583304390861" duration="30000" />
+      <workItem from="1583394407234" duration="51000" />
+      <workItem from="1583479394093" duration="75000" />
+      <workItem from="1583486344902" duration="191000" />
+      <workItem from="1583486626712" duration="2000" />
+      <workItem from="1583486677714" duration="1130000" />
+      <workItem from="1583495840373" duration="2553000" />
+      <workItem from="1583498520594" duration="38000" />
+      <workItem from="1583499759263" duration="138000" />
+      <workItem from="1583501664836" duration="78000" />
+      <workItem from="1583502326901" duration="605000" />
+      <workItem from="1583512378807" duration="9000" />
+      <workItem from="1583512400922" duration="10000" />
+      <workItem from="1583594618160" duration="39000" />
+      <workItem from="1583648391278" duration="315000" />
+      <workItem from="1583649940950" duration="605000" />
+      <workItem from="1583766969482" duration="152000" />
+      <workItem from="1583849153307" duration="615000" />
+      <workItem from="1583852817271" duration="688000" />
+      <workItem from="1583906590767" duration="67000" />
+      <workItem from="1583949058068" duration="52000" />
+      <workItem from="1584334273752" duration="623000" />
+      <workItem from="1584422248848" duration="71000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="1071410000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.30093834" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32956153" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49932975" weight="0.38896745" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39886847" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32956153" />
+      <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32956153" />
+      <window_info anchor="bottom" id="Spring" order="8" weight="0.32956153" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32956153" />
+      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50067025" side_tool="true" weight="0.28854313" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32956153" />
+      <window_info anchor="bottom" id="Java Enterprise" order="13" />
+      <window_info anchor="bottom" id="Database Changes" order="14" />
+      <window_info anchor="bottom" id="Version Control" order="15" />
+      <window_info anchor="bottom" id="Duplicates" order="16" weight="0.32956153" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.22319035" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" weight="0.3297587" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory">
+        <watch expression="commodityid" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/jyl/Util/Msg.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/jyl/controller/ShopInfoController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="71" lean-forward="true" selection-start-line="71" selection-end-line="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ShopinfoDao.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/CartDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="73" column="24" lean-forward="true" selection-start-line="73" selection-start-column="24" selection-end-line="73" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/jyl/controller/CatController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2869">
+          <caret line="166" column="5" selection-start-line="166" selection-start-column="5" selection-end-line="166" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/UserDao.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/jyl/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-855">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/hd/remind1.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="468" lean-forward="true" selection-start-line="468" selection-end-line="468" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/jyl/Util/OrdersBh.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/hd/orders_edit.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3677">
+          <caret line="649" lean-forward="true" selection-start-line="649" selection-end-line="649" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/jyl/controller/Tiaoz.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-171">
+          <caret line="34" column="30" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/hd/index-hd.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2138">
+          <caret line="114" column="54" lean-forward="true" selection-start-line="114" selection-start-column="54" selection-end-line="114" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/OrdersDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2276">
+          <caret line="118" lean-forward="true" selection-start-line="118" selection-end-line="118" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/jyl/controller/OrdersController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-247">
+          <caret line="121" lean-forward="true" selection-start-line="121" selection-end-line="121" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/qd/yunlogin.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2503">
+          <caret line="224" selection-start-line="224" selection-end-line="224" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/qd/register.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3762" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/qd/repassword.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2998" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/qd/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="119" column="13" lean-forward="true" selection-start-line="119" selection-start-column="13" selection-end-line="119" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/qd/commodityByCat.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/qd/commodity.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="49" column="25" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-946">
+          <caret column="24" lean-forward="true" selection-start-column="24" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/qd/repassworSuccess.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-342" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/qd/userinfopassword.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1307" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/qd/userinfoPhone.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1824">
+          <caret line="97" column="43" selection-start-line="97" selection-start-column="43" selection-end-line="97" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Dubbo/pom.xml" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/springmvc.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="760">
+          <caret line="40" column="47" selection-start-line="40" selection-start-column="47" selection-end-line="40" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/jyl/controller/RemindController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/qd/userinfo.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="12046">
+          <caret line="634" column="93" selection-start-line="634" selection-start-column="93" selection-end-line="634" selection-end-column="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/jyl/controller/CartController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1026">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/hd/commodity_status.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1653" />
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/spring-web/4.3.7.RELEASE/spring-web-4.3.7.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="31" column="94" selection-start-line="31" selection-start-column="94" selection-end-line="31" selection-end-column="94" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/hd/cs.jsp" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="29" column="11" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/hd/orders_status0.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8360">
+          <caret line="440" column="52" selection-start-line="440" selection-start-column="52" selection-end-line="440" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/SqlMapConfig.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="54" selection-start-line="3" selection-start-column="54" selection-end-line="3" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/hd/commodity_edit.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10184">
+          <caret line="536" column="6" selection-start-line="536" selection-start-column="6" selection-end-line="536" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/jyl/daomain/Cat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/jyl/daomain/Like.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/jyl/daomain/Commodity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="27" column="30" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/jyl/config/AlipayConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/CommodityDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3002">
+          <caret line="158" column="27" selection-start-line="158" selection-start-column="27" selection-end-line="158" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/LikeDao.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/hd/commodity_add.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5149">
+          <caret line="271" column="18" selection-start-line="271" selection-start-column="18" selection-end-line="271" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/jyl/controller/AlipayController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1311">
+          <caret line="88" column="17" selection-start-line="88" selection-start-column="17" selection-end-line="88" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/jyl/controller/LikeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/jyl/controller/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8075">
+          <caret line="454" selection-start-line="454" selection-end-line="454" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/jyl/controller/YunMiController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2565">
+          <caret line="160" column="33" selection-start-line="160" selection-start-column="33" selection-end-line="160" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/CatDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1045">
+          <caret line="55" column="13" selection-start-line="55" selection-start-column="13" selection-end-line="55" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cn/jyl/controller/CommodityController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="39" column="19" selection-start-line="39" selection-start-column="19" selection-end-line="39" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
